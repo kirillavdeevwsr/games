@@ -220,7 +220,8 @@ function drawAnime() {
 
     };
 }
-
+// awdad
+console.log(1);
 //случайное число
 function randomInteger(min, max) {
     // получить случайное число от (min-0.5) до (max+0.5)
