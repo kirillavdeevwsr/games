@@ -1,0 +1,362 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url("../image/c_bg_0002.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter {
+    width: 0;
+    height: 0;
+    box-shadow: black 0 0 2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    position: relative;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.enter > .logo-anime {
+    position: absolute;
+    top: -20%;
+    z-index: 100;
+    width: 100%;
+    height: 30%;
+    display: none;
+    text-align: center;
+}
+
+.enter > .logo-anime > img {
+    width: 70%;
+}
+
+.choice-anime {
+    display: none;
+}
+
+.choice {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.choice-text-anime {
+    display: none;
+    font-weight: bolder;
+    font-size: 200%;
+    font-family: "Comic Sans MS";
+}
+
+.character {
+    width: 50%;
+    height: 200px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: green 0 0 6px;
+    background: #8dc788;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.character:hover {
+    box-shadow: black 0 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.character:hover > img {
+    transform: scale(1.4, 1.4);
+}
+
+.enter-footer {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: -5%;
+    display: flex;
+    justify-content: center;
+}
+
+.enter-footer > .info-anime {
+    width: 90%;
+    height: 100%;
+    box-shadow: black 0 0 2px;
+    border-radius: 10px 10px 20px 20px;
+    background: #DFDFDF;
+    display: none;
+}
+
+.enter-footer > .info-anime > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.copy {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    margin: 5px;
+}
+
+.rules-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    border-radius: 20px;
+    position: absolute;
+    top: -100%;
+    width: 600px;
+    height: 700px;
+    background: white;
+}
+
+.modal > .title {
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal > .rules-text {
+    width: 100%;
+    height: 90%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.modal > .rules-text > .text {
+    height: 95%;
+    width: 90%;
+    border-radius: 6px;
+    overflow-y: auto;
+
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    color: white;
+    top: 0px;
+    right: -30px;
+    border-radius: 50%;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.start-game {
+    margin: 0;
+    display: none;
+    height: 50%;
+}
+
+.start-game > div {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.start-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-enter {
+    width: 30%;
+    height: 30px;
+    margin: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    cursor: default;
+    color: rgba(0,0,0,0.8);
+    background: #a3e59d;
+}
+
+.btn-enter:disabled{
+    background: silver;
+    color: rgba(0,0,0,0.2);
+}
+
+.btn-enter:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.pl-name-animate {
+    outline: none;
+    width: 200px;
+    height: 30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+    display: flex;
+    text-align: center;
+}
+
+.pl-name-animate::-moz-placeholder {
+    color: #676767;
+}
+
+.pl-name-animate::-webkit-input-placeholder {
+    color: #676767;
+}
+
+
+
+/**
+видео ролик
+ */
+
+.start-media{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+}
+
+.start-video{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start-video > .video-player{
+    display: none;
+    width: 50%;
+    border-radius: 25px;
+    cursor: none;
+    box-shadow: white 0 0 6px;
+}
+.video-stop {
+    background: white;
+    color: silver;
+    font-weight: bolder;
+    border-radius: 6px;
+    padding: 4px;
+    width: 25%;
+    text-align: center;
+    transform: translateY(-10px);
+}
+
+
+
+/**
+игра
+ */
+.game-field {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.game-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.game-field > .player{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    left: 0;
+    margin-bottom: 50px;
+    /*background: #a3e59d;*/
+    overflow: hidden;
+}
+
+.player > img {
+    position: absolute;
+    top: -605px;
+    left: -367px;
+    width: 747px;
+}
+
+.land{
+    width: 0;
+    height: 0;
+}
+
+.land > .img1{
+    left: 400px;
+    width: 90px;
+    position: relative;
+    bottom: -400px;
+}
+
+.land > .img2{
+    left: 400px;
+    width: 90px;
+    position: relative;
+    bottom: -400px;
+}
